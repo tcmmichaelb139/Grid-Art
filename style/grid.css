@@ -41,6 +41,7 @@ td {
     animation-timing-function: ease;
 }
 
+/*From some website I forgot*/
 @keyframes pop-swirl {
     from {
         background-color: var(--bg-light);
@@ -59,6 +60,9 @@ td {
     }
 }
 
+/* https://animate.style 
+ * rubberBand
+ */
 @keyframes rubberBand {
     from {
         transform: scale3d(1, 1, 1);

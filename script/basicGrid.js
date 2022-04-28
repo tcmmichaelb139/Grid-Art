@@ -48,16 +48,26 @@ function clearGrid() {
 
 let isDragging = false;
 
+document.getElementById("gridContainer").addEventListener("mousedown", () => {
+    isDragging = true;
+});
+
+document.getElementById("gridContainer").addEventListener("mouseup", () => {
+    isDragging = false;
+});
+
+document.getElementById("header").addEventListener("mousedown", () => {
+    isDragging = true;
+});
+
+document.getElementById("header").addEventListener("mouseup", () => {
+    isDragging = false;
+});
+
 for (let i = 0; i < numHeightBoxes; i++) {
     for (let j = 0; j < numWidthBoxes; j++) {
         let box = document.getElementById(String(i + "-" + j));
-        box.addEventListener("mousedown", () => {
-            isDragging = true;
-        });
         box.addEventListener("mousemove", () => switchColor(box.id));
-        box.addEventListener("mouseup", () => {
-            isDragging = false;
-        });
     }
 }
 
