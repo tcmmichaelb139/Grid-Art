@@ -48,6 +48,10 @@ function clearGrid() {
 
 let isDragging = false;
 
+document.documentElement.addEventListener("mouseleave", () => {
+    isDragging = false;
+});
+
 document.getElementById("gridContainer").addEventListener("mousedown", () => {
     isDragging = true;
 });

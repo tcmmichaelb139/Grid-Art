@@ -15,10 +15,6 @@
     cursor: pointer;
 }
 
-.redEntry:hover {
-    background-color: var(--red-light);
-}
-
 .orangeEntry {
     background-color: var(--orange-light);
     border-color: var(--orange-light);
