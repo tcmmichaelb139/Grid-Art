@@ -5,6 +5,7 @@ td {
     border: 1px solid;
     border-collapse: collapse;
     user-drag: none;
+    user-select: none;
 }
 
 .container {
