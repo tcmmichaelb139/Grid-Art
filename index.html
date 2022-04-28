@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link
+            href="https://fonts.googleapis.com/css?family=Fira Code"
+            rel="stylesheet"
+        />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link href="style/header.css" rel="stylesheet" type="text/css" />
+        <link href="style/grid.css" rel="stylesheet" type="text/css" />
+        <title>Grid</title>
+    </head>
+    <body>
+        <header id="header">
+            <h1>Grid Art</h1>
+            <button class="btn" id="clearBtn">Clear</button>
+            <div class="slider">
+                <input
+                    type="checkbox"
+                    name="slider"
+                    class="slider-checkbox"
+                    id="sliderSwitch"
+                />
+                <label class="slider-label" for="sliderSwitch">
+                    <span class="slider-inner"></span>
+                    <span class="slider-circle"></span>
+                </label>
+            </div>
+            <div>
+                <select class="dropDown" id="pickColors">
+                    <option class="redEntry" value="red">Red</option>
+
+                    <option class="orangeEntry" value="orange">Orange</option>
+
+                    <option class="yellowEntry" value="yellow">Yellow</option>
+
+                    <option class="greenEntry" value="green">Green</option>
+
+                    <option class="cyanEntry" value="cyan">Cyan</option>
+
+                    <option class="blueEntry" value="blue">Blue</option>
+
+                    <option class="purpleEntry" value="purple">Purple</option>
+
+                    <option class="grayEntry" value="gray">Gray</option>
+                </select>
+            </div>
+        </header>
+        <div class="container" id="gridContainer">
+            <table id="tableContainer"></table>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="./script/basicGrid.js"></script>
+    </body>
+</html>

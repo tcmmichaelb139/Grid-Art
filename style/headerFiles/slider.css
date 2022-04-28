@@ -1,0 +1,79 @@
+/* slider checkbox */
+.slider {
+    border: none;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 80px;
+}
+
+.slider-checkbox {
+    display: none;
+}
+
+.slider-label {
+    border: 2px solid var(--gray-light);
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+}
+
+.slider-inner {
+    display: block;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+    width: 200%;
+}
+
+.slider-inner:before,
+.slider-inner:after {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    padding: 0;
+    width: 50%;
+}
+
+.slider-inner:before {
+    background-color: var(--purple-light);
+    color: var(--bg-light);
+    content: "Draw";
+    padding-right: 1.5em;
+}
+
+.slider-inner:after {
+    background-color: var(--fg-light);
+    color: var(--bg-light);
+    content: "Erase";
+    padding-right: 0.75em;
+    text-align: right;
+}
+
+.slider-circle {
+    background-color: var(--purple-light);
+    border: 2px solid var(--gray-light);
+    border-radius: 20px;
+    bottom: 0;
+    display: block;
+    margin: 5px;
+    position: absolute;
+    right: 56px;
+    top: 0;
+    transition: all 0.3s ease-in 0s;
+    width: 10px;
+}
+
+.slider-checkbox:checked + .slider-label .slider-inner {
+    margin-left: 0;
+}
+
+.slider-checkbox:checked + .slider-label .slider-circle {
+    background-color: var(--fg-light);
+    right: 0;
+}

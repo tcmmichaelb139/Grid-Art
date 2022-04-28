@@ -1,0 +1,19 @@
+/* clear button */
+.btn {
+    background-color: var(--blue-light);
+    border: 2px solid var(--gray-light);
+    color: var(--bg-light);
+    font-size: 12px;
+    opacity: 0.9;
+    height: 20px;
+    width: 60px;
+    border-radius: 14px;
+    margin: 10px;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    opacity: 1;
+}

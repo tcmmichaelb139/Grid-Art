@@ -1,0 +1,88 @@
+/* Main Grid */
+table,
+tr,
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.container {
+    padding: var(--box-side-length);
+}
+
+/* Grid cell not filled */
+.gridOff {
+    width: var(--box-side-length);
+    height: var(--box-side-length);
+    /* background-color: var(--bg-light); */
+    /* border-color: var(--gray-light); */
+    transition: opacity 3s ease-it-out;
+}
+
+.fadeOut {
+    animation-name: pop-swirl;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+}
+
+/* Grid cell filled */
+.gridOn {
+    width: var(--box-side-length);
+    height: var(--box-side-length);
+    /* background-color: var(--purple-light); */
+    /* border-color: var(--purple-light); */
+}
+
+.fadeIn {
+    animation-name: rubberBand;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+
+@keyframes pop-swirl {
+    from {
+        background-color: var(--bg-light);
+    }
+    0% {
+        transform: scale(0) rotate(360deg);
+    }
+    60% {
+        transform: scale(0.8) rotate(-10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+    to {
+        background-color: var(--fg-light);
+    }
+}
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}

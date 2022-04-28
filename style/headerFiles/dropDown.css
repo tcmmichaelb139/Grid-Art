@@ -1,0 +1,58 @@
+.dropDown {
+    background-color: var(--cyan-light);
+    color: var(--bg-light);
+    font-size: 12px;
+    height: 20px;
+    margin: 10px;
+    border: 2px solid var(--gray-light);
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.redEntry {
+    background-color: var(--red-light);
+    border-color: var(--red-light);
+    cursor: pointer;
+}
+
+.orangeEntry {
+    background-color: var(--orange-light);
+    border-color: var(--orange-light);
+    cursor: pointer;
+}
+
+.yellowEntry {
+    background-color: var(--yellow-light);
+    border-color: var(--yellow-light);
+    cursor: pointer;
+}
+
+.greenEntry {
+    background-color: var(--green-light);
+    border-color: var(--green-light);
+    cursor: pointer;
+}
+
+.cyanEntry {
+    background-color: var(--cyan-light);
+    border-color: var(--cyan-light);
+    cursor: pointer;
+}
+
+.blueEntry {
+    background-color: var(--blue-light);
+    border-color: var(--blue-light);
+    cursor: pointer;
+}
+
+.purpleEntry {
+    background-color: var(--purple-light);
+    border-color: var(--purple-light);
+    cursor: pointer;
+}
+
+.grayEntry {
+    background-color: var(--gray-light);
+    border-color: var(--gray-light);
+    cursor: pointer;
+}
