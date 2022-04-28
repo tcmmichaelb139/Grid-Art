@@ -11,7 +11,6 @@ for (let i = 0; i < numHeightBoxes; i++) {
         let col = document.createElement("td");
         col.className = "gridOff";
         col.id = i + "-" + j;
-        col.setAttribute("draggable", false);
         document.getElementById("row " + i).appendChild(col);
     }
 }

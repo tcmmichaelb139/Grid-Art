@@ -4,6 +4,7 @@ tr,
 td {
     border: 1px solid;
     border-collapse: collapse;
+    user-drag: none;
 }
 
 .container {
