@@ -16,14 +16,11 @@ td {
 .gridOff {
     width: var(--box-side-length);
     height: var(--box-side-length);
-    /* background-color: var(--bg-light); */
-    /* border-color: var(--gray-light); */
-    transition: opacity 3s ease-it-out;
 }
 
 .fadeOut {
     animation-name: pop-swirl;
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-direction: reverse;
 }
 
@@ -31,14 +28,11 @@ td {
 .gridOn {
     width: var(--box-side-length);
     height: var(--box-side-length);
-    /* background-color: var(--purple-light); */
-    /* border-color: var(--purple-light); */
 }
 
 .fadeIn {
-    animation-name: rubberBand;
+    animation-name: bounceIn;
     animation-duration: 0.5s;
-    animation-timing-function: ease;
 }
 
 /*From some website I forgot*/
@@ -57,38 +51,5 @@ td {
     }
     to {
         background-color: var(--fg-light);
-    }
-}
-
-/* https://animate.style 
- * rubberBand
- */
-@keyframes rubberBand {
-    from {
-        transform: scale3d(1, 1, 1);
-    }
-
-    30% {
-        transform: scale3d(1.25, 0.75, 1);
-    }
-
-    40% {
-        transform: scale3d(0.75, 1.25, 1);
-    }
-
-    50% {
-        transform: scale3d(1.15, 0.85, 1);
-    }
-
-    65% {
-        transform: scale3d(0.95, 1.05, 1);
-    }
-
-    75% {
-        transform: scale3d(1.05, 0.95, 1);
-    }
-
-    to {
-        transform: scale3d(1, 1, 1);
     }
 }

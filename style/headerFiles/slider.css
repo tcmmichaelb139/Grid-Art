@@ -43,22 +43,22 @@
 }
 
 .slider-inner:before {
-    background-color: var(--purple-light);
-    color: var(--bg-light);
-    content: "Draw";
-    padding-right: 1.5em;
-}
-
-.slider-inner:after {
     background-color: var(--fg-light);
     color: var(--bg-light);
     content: "Erase";
-    padding-right: 0.75em;
+    padding-right: 2em;
     text-align: right;
 }
 
-.slider-circle {
+.slider-inner:after {
     background-color: var(--purple-light);
+    color: var(--bg-light);
+    content: "Draw";
+    padding-left: 0.75em;
+}
+
+.slider-circle {
+    background-color: var(--fg-light);
     border: 2px solid var(--gray-light);
     border-radius: 20px;
     bottom: 0;
@@ -76,6 +76,6 @@
 }
 
 .slider-checkbox:checked + .slider-label .slider-circle {
-    background-color: var(--fg-light);
+    background-color: var(--purple-light);
     right: 0;
 }

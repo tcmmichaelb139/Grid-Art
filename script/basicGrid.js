@@ -78,7 +78,7 @@ for (let i = 0; i < numHeightBoxes; i++) {
 async function switchColor(cell) {
     let box = document.getElementById(cell);
     if (isDragging) {
-        if (document.getElementById("sliderSwitch").checked) {
+        if (!document.getElementById("sliderSwitch").checked) {
             colors.forEach((color) => {
                 if (box.classList.contains(color + "Entry"))
                     box.classList.remove(color + "Entry");
