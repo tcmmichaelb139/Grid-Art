@@ -1,14 +1,15 @@
 /* clear button */
 .btn {
-    background-color: var(--blue-light);
-    border: 2px solid var(--gray-light);
-    color: var(--bg-light);
+    background-color: var(--blue);
+    border: 2px solid var(--gray);
+    color: var(--bg);
     font-size: 12px;
     opacity: 0.9;
     height: 20px;
     width: 60px;
     border-radius: 14px;
     margin: 10px;
+    padding: 0 0 2px 0;
     display: block;
     cursor: pointer;
     text-decoration: none;

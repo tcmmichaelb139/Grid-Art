@@ -38,7 +38,7 @@ td {
 /*From some website I forgot*/
 @keyframes pop-swirl {
     from {
-        background-color: var(--bg-light);
+        background-color: var(--bg);
     }
     0% {
         transform: scale(0) rotate(360deg);
@@ -50,6 +50,6 @@ td {
         transform: scale(1) rotate(0deg);
     }
     to {
-        background-color: var(--fg-light);
+        background-color: var(--fg);
     }
 }

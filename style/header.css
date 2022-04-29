@@ -4,14 +4,14 @@
 
 /* For the header at the top */
 header {
-    background-color: var(--text-light);
-    color: var(--bg-light);
+    background-color: var(--text);
+    color: var(--bg);
     /* height: 80px; */
     padding: var(--box-side-length);
     font-family: "Fira Code";
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: left;
+    justify-content: space-evenly;
     user-select: none;
 }

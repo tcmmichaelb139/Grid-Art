@@ -1,58 +1,58 @@
 .dropDown {
-    background-color: var(--cyan-light);
-    color: var(--bg-light);
+    background-color: var(--cyan);
+    color: var(--bg);
     font-size: 12px;
     height: 20px;
     margin: 10px;
-    border: 2px solid var(--gray-light);
+    border: 2px solid var(--gray);
     border-radius: 14px;
     cursor: pointer;
 }
 
 .redEntry {
-    background-color: var(--red-light);
-    border-color: var(--red-light);
+    background-color: var(--red);
+    border-color: var(--red);
     cursor: pointer;
 }
 
 .orangeEntry {
-    background-color: var(--orange-light);
-    border-color: var(--orange-light);
+    background-color: var(--orange);
+    border-color: var(--orange);
     cursor: pointer;
 }
 
 .yellowEntry {
-    background-color: var(--yellow-light);
-    border-color: var(--yellow-light);
+    background-color: var(--yellow);
+    border-color: var(--yellow);
     cursor: pointer;
 }
 
 .greenEntry {
-    background-color: var(--green-light);
-    border-color: var(--green-light);
+    background-color: var(--green);
+    border-color: var(--green);
     cursor: pointer;
 }
 
 .cyanEntry {
-    background-color: var(--cyan-light);
-    border-color: var(--cyan-light);
+    background-color: var(--cyan);
+    border-color: var(--cyan);
     cursor: pointer;
 }
 
 .blueEntry {
-    background-color: var(--blue-light);
-    border-color: var(--blue-light);
+    background-color: var(--blue);
+    border-color: var(--blue);
     cursor: pointer;
 }
 
 .purpleEntry {
-    background-color: var(--purple-light);
-    border-color: var(--purple-light);
+    background-color: var(--purple);
+    border-color: var(--purple);
     cursor: pointer;
 }
 
 .grayEntry {
-    background-color: var(--gray-light);
-    border-color: var(--gray-light);
+    background-color: var(--gray);
+    border-color: var(--gray);
     cursor: pointer;
 }

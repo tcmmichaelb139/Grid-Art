@@ -4,17 +4,17 @@
      * github light theme
      */
 
-    --bg-light: #f7f8fa;
-    --fg-light: #5b6168;
-    --text-light: #292d31;
-    --green-light: #22863a;
-    --yellow-light: rgb(228, 198, 99);
-    --blue-light: #005cc5;
-    --red-light: #d73a49;
-    --purple-light: #6f42c1;
-    --orange-light: #e36209;
-    --cyan-light: #032f62;
-    --gray-light: #6a737d;
+    --bg: #f7f8fa;
+    --fg: #5b6168;
+    --text: #292d31;
+    --green: #22863a;
+    --yellow: rgb(228, 198, 99);
+    --blue: #005cc5;
+    --red: #d73a49;
+    --purple: #6f42c1;
+    --orange: #e36209;
+    --cyan: #032f62;
+    --gray: #6a737d;
 
     --box-side-length: 22px;
 }
@@ -26,9 +26,9 @@
 /* Normal Stuff  */
 html,
 body {
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    height: 100%;
+    background-color: var(--bg);
+    color: var(--text);
+    /* height: 100%; */
     margin: 0;
     /* overflow: hidden; */
 }
