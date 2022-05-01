@@ -1,6 +1,6 @@
 .dropDown {
-    background-color: var(--cyan);
-    color: var(--bg);
+    background-color: var(--blue);
+    color: var(--fg);
     font-size: 12px;
     height: 20px;
     margin: 10px;

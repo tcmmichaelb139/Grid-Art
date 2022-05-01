@@ -4,8 +4,8 @@
 
 /* For the header at the top */
 header {
-    background-color: var(--text);
-    color: var(--bg);
+    background-color: var(--bg);
+    color: var(--fg);
     /* height: 80px; */
     padding: var(--box-side-length);
     font-family: "Fira Code";

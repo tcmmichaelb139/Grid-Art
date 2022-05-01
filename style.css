@@ -1,21 +1,4 @@
 :root {
-    /* colors from: 
-     * https://material-theme.com/docs/reference/color-palette/#other-themes 
-     * github light theme
-     */
-
-    --bg: #f7f8fa;
-    --fg: #5b6168;
-    --text: #292d31;
-    --green: #22863a;
-    --yellow: rgb(228, 198, 99);
-    --blue: #005cc5;
-    --red: #d73a49;
-    --purple: #6f42c1;
-    --orange: #e36209;
-    --cyan: #032f62;
-    --gray: #6a737d;
-
     --box-side-length: 22px;
 }
 
@@ -26,9 +9,7 @@
 /* Normal Stuff  */
 html,
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    /* height: 100%; */
+    background-color: var(--fg);
+    color: var(--gray);
     margin: 0;
-    /* overflow: hidden; */
 }

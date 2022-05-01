@@ -43,22 +43,22 @@
 }
 
 .slider-inner:before {
-    background-color: var(--fg);
-    color: var(--bg);
+    background-color: var(--bg);
+    color: var(--fg);
     content: "Erase";
     padding-right: 2em;
 }
 
 .slider-inner:after {
     background-color: var(--purple);
-    color: var(--bg);
+    color: var(--fg);
     content: "Draw";
     padding-right: 0.75em;
     text-align: right;
 }
 
 .slider-circle {
-    background-color: var(--fg);
+    background-color: var(--bg);
     border: 2px solid var(--gray);
     border-radius: 20px;
     bottom: 0;
