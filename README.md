@@ -1,6 +1,8 @@
 # Grid Art
 
-You can create art with the grids.
+https://tcmmichaelb139.github.io/Grid-Art/
+
+Create art with grids.
 
 ## Screenshots
 
