@@ -18,9 +18,9 @@
             rel="stylesheet"
         />
 
-        <link href="style.css" rel="stylesheet" type="text/css" />
-        <link href="style/header.css" rel="stylesheet" type="text/css" />
-        <link href="style/grid.css" rel="stylesheet" type="text/css" />
+        <link href="/style.css" rel="stylesheet" type="text/css" />
+        <link href="/css/header.css" rel="stylesheet" type="text/css" />
+        <link href="/css/grid.css" rel="stylesheet" type="text/css" />
         <title>Grid Art</title>
     </head>
     <body>
@@ -39,24 +39,8 @@
                     <span class="slider-circle"></span>
                 </label>
             </div>
-            <div>
-                <select class="dropDown" id="pickColors">
-                    <option class="redEntry" value="red">Red</option>
-
-                    <option class="orangeEntry" value="orange">Orange</option>
-
-                    <option class="yellowEntry" value="yellow">Yellow</option>
-
-                    <option class="greenEntry" value="green">Green</option>
-
-                    <option class="cyanEntry" value="cyan">Cyan</option>
-
-                    <option class="blueEntry" value="blue">Blue</option>
-
-                    <option class="purpleEntry" value="purple">Purple</option>
-
-                    <option class="grayEntry" value="gray">Gray</option>
-                </select>
+            <div id="colorDiv">
+                <input id="colorpicker" value="#ffb3d1" type="color" />
             </div>
             <div>
                 <button class="btn" id="save">Save</button>
@@ -66,9 +50,9 @@
             <table id="tableContainer"></table>
         </div>
 
-        <script src="./script/html2canvas.min.js"></script>
-        <script defer src="script.js"></script>
-        <script src="./script/basicGrid.js"></script>
-        <script src="./script/captureImage.js"></script>
+        <script src="/js/html2canvas.min.js"></script>
+        <script defer src="/script.js"></script>
+        <script src="/js/basicGrid.js"></script>
+        <script src="/js/captureImage.js"></script>
     </body>
 </html>

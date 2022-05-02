@@ -1,6 +1,6 @@
-@import "headerFiles/button.css";
-@import "headerFiles/slider.css";
-@import "headerFiles/dropDown.css";
+@import "/css/headerFiles/button.css";
+@import "/css/headerFiles/slider.css";
+@import "/css/headerFiles/colorPicker.css";
 
 /* For the header at the top */
 header {

@@ -16,11 +16,12 @@ td {
 .gridOff {
     width: var(--box-side-length);
     height: var(--box-side-length);
+    background-color: var(--fg);
 }
 
 .fadeOut {
     animation-name: pop-swirl;
-    animation-duration: 0.3s;
+    animation-duration: 0.5s;
     animation-direction: reverse;
 }
 
@@ -28,6 +29,7 @@ td {
 .gridOn {
     width: var(--box-side-length);
     height: var(--box-side-length);
+    background-color: var(--pink);
 }
 
 .fadeIn {

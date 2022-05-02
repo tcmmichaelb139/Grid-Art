@@ -1,8 +1,8 @@
 /* clear button */
 .btn {
-    background-color: var(--red);
-    border: 2px solid var(--gray);
-    color: var(--fg);
+    background-color: var(--pink);
+    border: 2px solid var(--fg);
+    color: var(--bg);
     font-size: 12px;
     opacity: 0.9;
     height: 20px;

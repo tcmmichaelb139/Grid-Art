@@ -16,7 +16,7 @@
 }
 
 .slider-label {
-    border: 2px solid var(--gray);
+    border: 2px solid var(--fg);
     border-radius: 20px;
     cursor: pointer;
     display: block;
@@ -44,14 +44,14 @@
 
 .slider-inner:before {
     background-color: var(--bg);
-    color: var(--fg);
+    color: var(--pink);
     content: "Erase";
     padding-right: 2em;
 }
 
 .slider-inner:after {
-    background-color: var(--purple);
-    color: var(--fg);
+    background-color: var(--pink);
+    color: var(--bg);
     content: "Draw";
     padding-right: 0.75em;
     text-align: right;
@@ -59,7 +59,6 @@
 
 .slider-circle {
     background-color: var(--bg);
-    border: 2px solid var(--gray);
     border-radius: 20px;
     bottom: 0;
     display: block;
@@ -76,6 +75,6 @@
 }
 
 .slider-checkbox:checked + .slider-label .slider-circle {
-    background-color: var(--purple);
+    background-color: var(--pink);
     right: 0;
 }

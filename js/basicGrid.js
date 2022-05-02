@@ -15,17 +15,6 @@ for (let i = 0; i < numHeightBoxes; i++) {
     }
 }
 
-let colors = [
-    "red",
-    "orange",
-    "yellow",
-    "green",
-    "cyan",
-    "blue",
-    "purple",
-    "gray",
-];
-
 document.getElementById("clearBtn").addEventListener("click", clearGrid);
 
 function clearGrid() {
@@ -33,12 +22,10 @@ function clearGrid() {
         for (let j = 0; j < numWidthBoxes; j++) {
             let box = document.getElementById(String(i + "-" + j));
             if (box.classList.contains("gridOn")) {
-                colors.forEach((color) => {
-                    if (box.classList.contains(color + "Entry"))
-                        box.classList.remove(color + "Entry");
-                });
                 box.classList.add("gridOff");
                 box.classList.add("fadeOut");
+                box.style.backgroundColor = "#ffffff";
+                box.style.borderColor = "#000000";
                 box.classList.remove("gridOn");
                 box.classList.remove("fadeIn");
             }
@@ -76,16 +63,11 @@ for (let i = 0; i < numHeightBoxes; i++) {
 }
 
 async function switchColor(cell) {
+    console.log(document.querySelector("#colorpicker").value);
+    let color = document.querySelector("#colorpicker").value;
     let box = document.getElementById(cell);
     if (isDragging) {
         if (!document.getElementById("sliderSwitch").checked) {
-            colors.forEach((color) => {
-                if (box.classList.contains(color + "Entry"))
-                    box.classList.remove(color + "Entry");
-            });
-            box.classList.add(
-                document.getElementById("pickColors").value + "Entry"
-            );
             if (box.classList.contains("gridOff")) {
                 box.classList.remove("gridOff");
             }
@@ -93,18 +75,18 @@ async function switchColor(cell) {
                 box.classList.remove("fadeOut");
             box.classList.add("gridOn");
             box.classList.add("fadeIn");
+            box.style.backgroundColor = color;
+            box.style.borderColor = color;
         } else {
             if (box.classList.contains("gridOn")) {
                 box.classList.remove("gridOn");
                 box.classList.add("fadeOut");
-                colors.forEach((color) => {
-                    if (box.classList.contains(color + "Entry"))
-                        box.classList.remove(color + "Entry");
-                });
             }
             if (box.classList.contains("fadeIn"))
                 box.classList.remove("fadeIn");
             box.classList.add("gridOff");
+            box.style.backgroundColor = "#ffffff";
+            box.style.borderColor = "#000000";
         }
     }
 }
