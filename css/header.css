@@ -1,6 +1,6 @@
 /* clear button */
 .btn {
-    background-color: var(--pink);
+    background-color: var(--accent1);
     border: 2px solid var(--fg);
     color: var(--bg);
     font-size: 12px;
@@ -65,13 +65,13 @@
 
 .slider-inner:before {
     background-color: var(--bg);
-    color: var(--pink);
+    color: var(--accent1);
     content: "Erase";
     padding-right: 2em;
 }
 
 .slider-inner:after {
-    background-color: var(--pink);
+    background-color: var(--accent1);
     color: var(--bg);
     content: "Draw";
     padding-right: 0.75em;
@@ -96,7 +96,7 @@
 }
 
 .slider-checkbox:checked + .slider-label .slider-circle {
-    background-color: var(--pink);
+    background-color: var(--accent1);
     right: 0;
 }
 
