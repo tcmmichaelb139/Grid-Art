@@ -8,7 +8,7 @@
     height: 20px;
     width: 60px;
     border-radius: 14px;
-    margin: 10px;
+    margin: 1rem;
     padding: 0 0 2px 0;
     display: block;
     cursor: pointer;
@@ -101,7 +101,7 @@
 }
 
 /* For the header at the top */
-header {
+#header {
     background-color: var(--bg);
     color: var(--fg);
     /* height: 80px; */
@@ -111,10 +111,15 @@ header {
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     user-select: none;
+}
+
+#header div:first-child {
+    margin-right: auto;
 }
 
 #colorpicker {
     border: var(--fg);
+    margin: 1rem 0 1rem 1rem;
 }
