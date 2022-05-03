@@ -114,3 +114,7 @@ header {
     justify-content: space-evenly;
     user-select: none;
 }
+
+#colorpicker {
+    border: var(--fg);
+}
