@@ -16,7 +16,6 @@ td {
 .gridOff {
     width: var(--box-side-length);
     height: var(--box-side-length);
-    background-color: var(--fg);
 }
 
 .fadeOut {
