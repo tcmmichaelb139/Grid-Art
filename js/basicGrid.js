@@ -17,7 +17,7 @@ for (let i = 0; i < numHeightBoxes; i++) {
 
 document.getElementById("clearBtn").addEventListener("click", clearGrid);
 
-function clearGrid() {
+async function clearGrid() {
     for (let i = 0; i < numHeightBoxes; i++) {
         for (let j = 0; j < numWidthBoxes; j++) {
             let box = document.getElementById(String(i + "-" + j));
@@ -28,6 +28,7 @@ function clearGrid() {
                 box.style.borderColor = "#000000";
                 box.classList.remove("gridOn");
                 box.classList.remove("fadeIn");
+                setTimeout(() => box.classList.remove("fadeOut"), 1000);
             }
         }
     }
@@ -35,7 +36,7 @@ function clearGrid() {
 
 let isDragging = false;
 
-document.documentElement.addEventListener("mouseleave", () => {
+document.getElementById("gridContainer").addEventListener("mouseleave", () => {
     isDragging = false;
 });
 
@@ -47,23 +48,15 @@ document.getElementById("gridContainer").addEventListener("mouseup", () => {
     isDragging = false;
 });
 
-document.getElementById("header").addEventListener("mousedown", () => {
-    isDragging = true;
-});
-
-document.getElementById("header").addEventListener("mouseup", () => {
-    isDragging = false;
-});
-
 for (let i = 0; i < numHeightBoxes; i++) {
     for (let j = 0; j < numWidthBoxes; j++) {
         let box = document.getElementById(String(i + "-" + j));
+        box.addEventListener("click", () => switchColor(box.id));
         box.addEventListener("mousemove", () => switchColor(box.id));
     }
 }
 
 async function switchColor(cell) {
-    console.log(document.querySelector("#colorpicker").value);
     let color = document.querySelector("#colorpicker").value;
     let box = document.getElementById(cell);
     if (isDragging) {
@@ -87,6 +80,7 @@ async function switchColor(cell) {
             box.classList.add("gridOff");
             box.style.backgroundColor = "#ffffff";
             box.style.borderColor = "#000000";
+            setTimeout(() => box.classList.remove("fadeOut"), 1000);
         }
     }
 }
