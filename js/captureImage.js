@@ -1,15 +1,12 @@
-document.getElementById("save").addEventListener("click", () => {
-    html2canvas(document.querySelector("#tableContainer")).then((canvas) => {
+document.querySelector("#save").addEventListener("click", () => {
+    html2canvas(document.querySelector("#tableContainer"), {
+        allowTaint: true,
+    }).then((canvas) => {
         let myImage = canvas.toDataURL();
-        downloadImage(myImage, "download.png");
+        let link = document.createElement("a");
+        link.download = "download";
+        link.href = myImage;
+        document.body.appendChild(link);
+        link.click();
     });
 });
-
-function downloadImage(myImage, name) {
-    let link = document.createElement("a");
-
-    link.download = name;
-    link.href = myImage;
-    document.body.appendChild(link);
-    link.click();
-}

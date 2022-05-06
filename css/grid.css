@@ -1,4 +1,4 @@
-/* Main Grid */
+/* Main Grid  */
 table,
 tr,
 td {
@@ -8,27 +8,25 @@ td {
     user-select: none;
 }
 
+tr,
+td {
+    width: var(--box-side-length);
+    height: var(--box-side-length);
+}
+
 .container {
     padding: var(--box-side-length);
 }
 
-/* Grid cell not filled */
-.gridOff {
-    width: var(--box-side-length);
-    height: var(--box-side-length);
+#tableContainer {
+    background-color: var(--fg);
+    color: var(--bg);
 }
 
 .fadeOut {
     animation-name: pop-swirl;
     animation-duration: 0.5s;
     animation-direction: reverse;
-}
-
-/* Grid cell filled */
-.gridOn {
-    width: var(--box-side-length);
-    height: var(--box-side-length);
-    background-color: var(--accent1);
 }
 
 .fadeIn {
