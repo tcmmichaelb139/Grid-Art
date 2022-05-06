@@ -30,7 +30,7 @@ td {
 .fadeOut {
     animation-name: pop-swirl;
     animation-duration: 0.5s;
-    animation-direction: reverse;
+    /* animation-direction: reverse; */
 }
 
 .fadeIn {
@@ -38,19 +38,18 @@ td {
     animation-duration: 0.5s;
 }
 
-/*From some website I forgot*/
 @keyframes pop-swirl {
     from {
         background-color: var(--fg);
     }
     0% {
-        transform: scale(0) rotate(360deg);
+        transform: scale(1) rotate(360deg);
     }
     60% {
-        transform: scale(0.8) rotate(-10deg);
+        transform: scale(0.2) rotate(-10deg);
     }
     100% {
-        transform: scale(1) rotate(0deg);
+        transform: scale(0) rotate(0deg);
     }
     to {
         background-color: var(--bg);

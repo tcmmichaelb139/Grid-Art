@@ -9,12 +9,9 @@ for (let i = 0; i < numHeightBoxes; i++) {
     document.getElementById("tableContainer").appendChild(row);
     for (let j = 0; j < numWidthBoxes; j++) {
         let col = document.createElement("td");
-        col.className = "gridOff";
         col.id = i + "-" + j;
-        // col.style.backgroundColor = "#24283bff";
-        // col.style.borderColor = "#24283bff";
-        col.style.backgroundColor = "#ffffffff";
-        col.style.borderColor = "#000000ff";
+        col.style.backgroundColor = "#ffffff";
+        col.style.borderColor = "#000000";
         document.getElementById("row " + i).appendChild(col);
     }
 }
@@ -22,18 +19,15 @@ for (let i = 0; i < numHeightBoxes; i++) {
 document.getElementById("clearBtn").addEventListener("click", clearGrid);
 
 async function clearGrid() {
+    console.log("a;lsdkjf;asld");
     for (let i = 0; i < numHeightBoxes; i++) {
         for (let j = 0; j < numWidthBoxes; j++) {
             let box = document.getElementById(String(i + "-" + j));
-            if (box.classList.contains("gridOn")) {
-                box.classList.add("gridOff");
-                box.classList.add("fadeOut");
-                box.style.backgroundColor = "#ffffff";
-                box.style.borderColor = "#000000";
-                box.classList.remove("gridOn");
-                box.classList.remove("fadeIn");
-                setTimeout(() => box.classList.remove("fadeOut"), 1000);
-            }
+            box.classList.remove("fadeIn");
+            box.classList.add("fadeOut");
+            box.style.backgroundColor = "#ffffff";
+            box.style.borderColor = "#000000";
+            setTimeout(() => box.classList.remove("fadeOut"), 500);
         }
     }
 }
@@ -65,21 +59,17 @@ async function switchColor(cell) {
     let box = document.getElementById(cell);
     if (isDragging) {
         if (!document.getElementById("sliderSwitch").checked) {
-            if (box.classList.contains("fadeOut"))
-                box.classList.remove("fadeOut");
-            box.classList.replace("gridOn", "gridOff");
+            box.classList.remove("fadeOut");
             box.classList.add("fadeIn");
             box.style.backgroundColor = color;
             box.style.borderColor = color;
-            setTimeout(() => box.classList.remove("fadeIn"), 1000);
+            setTimeout(() => box.classList.remove("fadeIn"), 500);
         } else {
-            if (box.classList.contains("fadeIn"))
-                box.classList.remove("fadeIn");
-            box.classList.replace("gridOff", "gridOn");
+            box.classList.remove("fadeIn");
             box.classList.add("fadeOut");
             box.style.backgroundColor = "#ffffff";
             box.style.borderColor = "#000000";
-            setTimeout(() => box.classList.remove("fadeOut"), 1000);
+            setTimeout(() => box.classList.remove("fadeOut"), 500);
         }
     }
 }
