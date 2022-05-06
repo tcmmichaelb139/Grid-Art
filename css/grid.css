@@ -1,3 +1,7 @@
+:root {
+    --box-side-length: 22px;
+}
+
 /* Main Grid  */
 table,
 tr,

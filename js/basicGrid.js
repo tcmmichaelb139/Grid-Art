@@ -11,6 +11,10 @@ for (let i = 0; i < numHeightBoxes; i++) {
         let col = document.createElement("td");
         col.className = "gridOff";
         col.id = i + "-" + j;
+        // col.style.backgroundColor = "#24283bff";
+        // col.style.borderColor = "#24283bff";
+        col.style.backgroundColor = "#ffffffff";
+        col.style.borderColor = "#000000ff";
         document.getElementById("row " + i).appendChild(col);
     }
 }
@@ -24,8 +28,8 @@ async function clearGrid() {
             if (box.classList.contains("gridOn")) {
                 box.classList.add("gridOff");
                 box.classList.add("fadeOut");
-                box.style.backgroundColor = "#ffffffff";
-                box.style.borderColor = "#000000ff";
+                box.style.backgroundColor = "#ffffff";
+                box.style.borderColor = "#000000";
                 box.classList.remove("gridOn");
                 box.classList.remove("fadeIn");
                 setTimeout(() => box.classList.remove("fadeOut"), 1000);
@@ -63,17 +67,18 @@ async function switchColor(cell) {
         if (!document.getElementById("sliderSwitch").checked) {
             if (box.classList.contains("fadeOut"))
                 box.classList.remove("fadeOut");
-            box.classList.add("gridOn");
+            box.classList.replace("gridOn", "gridOff");
             box.classList.add("fadeIn");
-            box.style.backgroundColor = color + "ff";
-            box.style.borderColor = color + "ff";
+            box.style.backgroundColor = color;
+            box.style.borderColor = color;
+            setTimeout(() => box.classList.remove("fadeIn"), 1000);
         } else {
             if (box.classList.contains("fadeIn"))
                 box.classList.remove("fadeIn");
-            box.classList.add("gridOff");
+            box.classList.replace("gridOff", "gridOn");
             box.classList.add("fadeOut");
-            box.style.backgroundColor = "#ffffffff";
-            box.style.borderColor = "#000000ff";
+            box.style.backgroundColor = "#ffffff";
+            box.style.borderColor = "#000000";
             setTimeout(() => box.classList.remove("fadeOut"), 1000);
         }
     }
