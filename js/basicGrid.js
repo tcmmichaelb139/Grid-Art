@@ -49,8 +49,14 @@ document.getElementById("gridContainer").addEventListener("mouseup", () => {
 for (let i = 0; i < numHeightBoxes; i++) {
     for (let j = 0; j < numWidthBoxes; j++) {
         let box = document.getElementById(String(i + "-" + j));
-        box.addEventListener("click", () => switchColor(box.id));
-        box.addEventListener("mousemove", () => switchColor(box.id));
+        box.addEventListener("click", () => {
+            isDragging = true;
+            switchColor(box.id);
+            isDragging = false;
+        });
+        box.addEventListener("mousemove", () => {
+            switchColor(box.id);
+        });
     }
 }
 
