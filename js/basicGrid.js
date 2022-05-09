@@ -1,12 +1,12 @@
 let boxSideLength = 25;
-let headerOffSet = document.getElementById("header").offsetHeight;
+let headerOffSet = document.querySelector("#header").offsetHeight;
 let numHeightBoxes =
     Math.floor((window.innerHeight - headerOffSet) / boxSideLength) - 2;
 let numWidthBoxes = Math.floor(window.innerWidth / boxSideLength) - 2;
 for (let i = 0; i < numHeightBoxes; i++) {
     let row = document.createElement("tr");
     row.id = "row " + i;
-    document.getElementById("tableContainer").appendChild(row);
+    document.querySelector("#tableContainer").appendChild(row);
     for (let j = 0; j < numWidthBoxes; j++) {
         let col = document.createElement("td");
         col.id = i + "-" + j;
@@ -16,7 +16,7 @@ for (let i = 0; i < numHeightBoxes; i++) {
     }
 }
 
-document.getElementById("clearBtn").addEventListener("click", clearGrid);
+document.querySelector("#clearBtn").addEventListener("click", clearGrid);
 
 async function clearGrid() {
     console.log("a;lsdkjf;asld");
@@ -32,17 +32,24 @@ async function clearGrid() {
     }
 }
 
+document.body.addEventListener("keyup", () => {
+    if (event.which === 32) {
+        document.querySelector("#sliderSwitch").checked =
+            !document.querySelector("#sliderSwitch").checked;
+    }
+});
+
 let isDragging = false;
 
-document.getElementById("gridContainer").addEventListener("mouseleave", () => {
+document.querySelector("#gridContainer").addEventListener("mouseleave", () => {
     isDragging = false;
 });
 
-document.getElementById("gridContainer").addEventListener("mousedown", () => {
+document.querySelector("#gridContainer").addEventListener("mousedown", () => {
     isDragging = true;
 });
 
-document.getElementById("gridContainer").addEventListener("mouseup", () => {
+document.querySelector("#gridContainer").addEventListener("mouseup", () => {
     isDragging = false;
 });
 
@@ -64,7 +71,7 @@ async function switchColor(cell) {
     let color = document.querySelector("#colorpicker").value;
     let box = document.getElementById(cell);
     if (isDragging) {
-        if (!document.getElementById("sliderSwitch").checked) {
+        if (!document.querySelector("#sliderSwitch").checked) {
             box.classList.remove("fadeOut");
             box.classList.add("fadeIn");
             box.style.backgroundColor = color;
