@@ -23,11 +23,17 @@ async function clearGrid() {
     for (let i = 0; i < numHeightBoxes; i++) {
         for (let j = 0; j < numWidthBoxes; j++) {
             let box = document.getElementById(String(i + "-" + j));
-            box.classList.remove("fadeIn");
-            box.classList.add("fadeOut");
-            box.style.backgroundColor = "#ffffff";
-            box.style.borderColor = "#000000";
-            setTimeout(() => box.classList.remove("fadeOut"), 500);
+            console.log(box.style.borderColor);
+            if (
+                box.style.backgroundColor !== "rgb(255, 255, 255)" ||
+                box.style.borderColor !== "rgb(0, 0, 0)"
+            ) {
+                box.classList.remove("fadeIn");
+                box.classList.add("fadeOut");
+                box.style.backgroundColor = "#ffffff";
+                box.style.borderColor = "#000000";
+                setTimeout(() => box.classList.remove("fadeOut"), 500);
+            }
         }
     }
 }
