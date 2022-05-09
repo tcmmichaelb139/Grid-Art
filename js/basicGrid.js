@@ -1,8 +1,8 @@
 let boxSideLength = 25;
 let headerOffSet = document.querySelector("#header").offsetHeight;
 let numHeightBoxes =
-    Math.floor((window.innerHeight - headerOffSet) / boxSideLength) - 2;
-let numWidthBoxes = Math.floor(window.innerWidth / boxSideLength) - 2;
+    Math.floor((window.innerHeight - headerOffSet) / boxSideLength) - 1;
+let numWidthBoxes = Math.floor(window.innerWidth / boxSideLength) - 1;
 for (let i = 0; i < numHeightBoxes; i++) {
     let row = document.createElement("tr");
     row.id = "row " + i;
