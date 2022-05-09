@@ -28,16 +28,16 @@ td {
 }
 
 .fadeOut {
-    animation-name: pop-swirl;
+    animation-name: spiral;
     animation-duration: 0.5s;
 }
 
 .fadeIn {
-    animation-name: bounceIn;
+    animation-name: rubberBand;
     animation-duration: 0.5s;
 }
 
-@keyframes pop-swirl {
+@keyframes spiral {
     from {
         background-color: var(--fg);
     }

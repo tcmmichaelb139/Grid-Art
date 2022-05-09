@@ -1,3 +1,7 @@
+header {
+    height: 1rem;
+}
+
 /* clear button */
 .btn {
     background-color: var(--accent1);
@@ -8,7 +12,7 @@
     height: 20px;
     width: 60px;
     border-radius: 14px;
-    margin: 1rem;
+    margin: 0 1rem;
     padding: 0 0 2px 0;
     display: block;
     cursor: pointer;

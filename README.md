@@ -6,4 +6,8 @@ Create art with grids.
 
 ## Screenshots
 
-I would recommend you just use your operating system screenshot program because the web version makes the background color very bland.
+Screenshots work properly. I would recommend filling every square with a color before saving though.
+
+## How Its Made
+
+This grid art application uses tables to draw each square. This causes problems with moving a mouse quickly across the screen causing it not register, so move slowly and carefully.
