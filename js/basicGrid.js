@@ -16,6 +16,46 @@ for (let i = 0; i < numHeightBoxes; i++) {
     }
 }
 
+var colorPicker = new iro.ColorPicker("#colorDiv", {
+    id: "colorPicker",
+    width: 150,
+    color: "#ffb3d1",
+    display: "none",
+    borderWidth: 2,
+    borderColor: "#000000",
+    layout: [
+        {
+            component: iro.ui.Box,
+            options: {},
+        },
+        {
+            component: iro.ui.Slider,
+            options: {
+                // can also be 'saturation', 'value', 'red', 'green', 'blue', 'alpha' or 'kelvin'
+                sliderType: "hue",
+            },
+        },
+    ],
+});
+
+document.querySelector(".colorButton").addEventListener("click", () => {
+    document.querySelector("#colorPicker").style.display = "block";
+});
+
+document.addEventListener("mousedown", (event) => {
+    if (
+        !document.querySelector("#colorPicker").contains(event.target) &&
+        !document.querySelector(".colorButton").contains(event.target)
+    ) {
+        document.querySelector("#colorPicker").style.display = "none";
+    }
+});
+
+colorPicker.on("color:change", function (color) {
+    document.querySelector(".colorButton").style.backgroundColor =
+        color.hexString;
+});
+
 document.querySelector("#clearBtn").addEventListener("click", clearGrid);
 
 async function clearGrid() {
@@ -38,7 +78,7 @@ async function clearGrid() {
     }
 }
 
-document.body.addEventListener("keyup", () => {
+document.body.addEventListener("keydown", () => {
     if (event.which === 32) {
         document.querySelector("#sliderSwitch").checked =
             !document.querySelector("#sliderSwitch").checked;
@@ -74,7 +114,8 @@ for (let i = 0; i < numHeightBoxes; i++) {
 }
 
 async function switchColor(cell) {
-    let color = document.querySelector("#colorpicker").value;
+    let color = colorPicker.color.hexString;
+    console.log(color);
     let box = document.getElementById(cell);
     if (isDragging) {
         if (!document.querySelector("#sliderSwitch").checked) {
