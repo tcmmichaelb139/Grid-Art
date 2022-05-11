@@ -59,7 +59,6 @@ colorPicker.on("color:change", function (color) {
 document.querySelector("#clearBtn").addEventListener("click", clearGrid);
 
 async function clearGrid() {
-    console.log("a;lsdkjf;asld");
     for (let i = 0; i < numHeightBoxes; i++) {
         for (let j = 0; j < numWidthBoxes; j++) {
             let box = document.getElementById(String(i + "-" + j));
