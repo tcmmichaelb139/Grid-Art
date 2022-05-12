@@ -40,6 +40,7 @@ var colorPicker = new iro.ColorPicker("#colorDiv", {
 
 document.querySelector(".colorButton").addEventListener("click", () => {
     document.querySelector("#colorPicker").style.display = "block";
+    document.querySelector("#colorPicker").style.opacity = 1;
 });
 
 document.addEventListener("mousedown", (event) => {
@@ -48,6 +49,7 @@ document.addEventListener("mousedown", (event) => {
         !document.querySelector(".colorButton").contains(event.target)
     ) {
         document.querySelector("#colorPicker").style.display = "none";
+        document.querySelector("#colorPicker").style.opacity = 0;
     }
 });
 
