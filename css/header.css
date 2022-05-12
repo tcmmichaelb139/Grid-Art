@@ -138,3 +138,10 @@ header {
     margin-top: 2.5rem;
     transform: translateX(-70%);
 }
+
+svg {
+    height: 2rem;
+    width: auto;
+    fill: var(--accent1);
+    margin-top: 3px;
+}
