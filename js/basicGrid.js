@@ -87,15 +87,15 @@ document.body.addEventListener("keydown", () => {
 
 let isDragging = false;
 
-document.querySelector("#gridContainer").addEventListener("mouseleave", () => {
+document.addEventListener("mouseleave", () => {
     isDragging = false;
 });
 
-document.querySelector("#gridContainer").addEventListener("mousedown", () => {
+document.addEventListener("mousedown", () => {
     isDragging = true;
 });
 
-document.querySelector("#gridContainer").addEventListener("mouseup", () => {
+document.addEventListener("mouseup", () => {
     isDragging = false;
 });
 
