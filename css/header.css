@@ -1,5 +1,9 @@
 header {
     height: 2em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* clear button */
@@ -29,10 +33,6 @@ header {
 .slider {
     border: none;
     position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     width: 80px;
 }
 
@@ -132,11 +132,13 @@ header {
 }
 
 #colorPicker {
+    display: none;
     position: absolute;
-    opacity: 0;
     z-index: 2;
-    margin-top: 2.5rem;
-    transform: translateX(-70%);
+    transform: translateX(-70%) translateY(30%);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 svg {

@@ -23,15 +23,14 @@ var colorPicker = new iro.ColorPicker("#colorDiv", {
     display: "none",
     borderWidth: 2,
     borderColor: "#000000",
+    layoutDirection: "horizontal",
     layout: [
         {
             component: iro.ui.Box,
-            options: {},
         },
         {
             component: iro.ui.Slider,
             options: {
-                // can also be 'saturation', 'value', 'red', 'green', 'blue', 'alpha' or 'kelvin'
                 sliderType: "hue",
             },
         },
@@ -39,7 +38,7 @@ var colorPicker = new iro.ColorPicker("#colorDiv", {
 });
 
 document.querySelector(".colorButton").addEventListener("click", () => {
-    document.querySelector("#colorPicker").style.display = "block";
+    document.querySelector("#colorPicker").style.display = "flex";
     document.querySelector("#colorPicker").style.opacity = 1;
 });
 
