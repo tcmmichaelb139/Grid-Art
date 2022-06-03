@@ -1,6 +1,6 @@
 # Grid Art
 
-https://grid-art.michaelbao.io
+grid-art.michaelbao.io
 
 Create art with grids.
 
