@@ -1,6 +1,6 @@
 # Grid Art
 
-https://tcmmichaelb139.github.io/Grid-Art/
+https://grid-art.michaelbao.io
 
 Create art with grids.
 
