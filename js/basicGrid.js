@@ -52,7 +52,7 @@ document.addEventListener("mousedown", (event) => {
     }
 });
 
-colorPicker.on("color:change", function (color) {
+colorPicker.on("color:change", function(color) {
     document.querySelector(".colorButton").style.backgroundColor =
         color.hexString;
 });
@@ -63,7 +63,6 @@ async function clearGrid() {
     for (let i = 0; i < numHeightBoxes; i++) {
         for (let j = 0; j < numWidthBoxes; j++) {
             let box = document.getElementById(String(i + "-" + j));
-            console.log(box.style.borderColor);
             if (
                 box.style.backgroundColor !== "rgb(255, 255, 255)" ||
                 box.style.borderColor !== "rgb(0, 0, 0)"
@@ -115,7 +114,6 @@ for (let i = 0; i < numHeightBoxes; i++) {
 
 async function switchColor(cell) {
     let color = colorPicker.color.hexString;
-    console.log(color);
     let box = document.getElementById(cell);
     if (isDragging) {
         if (!document.querySelector("#sliderSwitch").checked) {
