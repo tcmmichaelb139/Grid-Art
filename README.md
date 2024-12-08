@@ -1,5 +1,7 @@
 # Grid Art
 
+![website demo](assets/website.png)
+
 [grid-art.michaelbao.io](https://grid-art.michaelbao.io)
 
 Create art with grids.
