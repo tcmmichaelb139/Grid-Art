@@ -2,7 +2,7 @@
 
 ![website demo](assets/website.png)
 
-[grid-art.michaelbao.io](https://grid-art.michaelbao.io)
+[grid-art.michaelbao.com](https://grid-art.michaelbao.com)
 
 Create art with grids.
 
